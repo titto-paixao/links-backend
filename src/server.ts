@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors'
-import 'dotenv'
+import dotenv from 'dotenv'
 
 import './database/connection'
+
+dotenv.config()
 
 import routes from './routes'
 import errorHandler from './errors/handler'
