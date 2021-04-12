@@ -1,9 +1,8 @@
-import {Request, Response} from 'express'
 import {getRepository} from 'typeorm'
 import Link from '../models/Link'
 
 export default {
-  async index(req:Request, res:Response){
+  async index(req, res){
 
     const linkRepository = getRepository(Link)
 
@@ -11,7 +10,7 @@ export default {
 
     return res.status(200).json(links)
   },
-  async create(req:Request, res:Response){
+  async create(req, res){
     const {name, link} = req.body
 
     const linkRepository = getRepository(Link)
@@ -23,7 +22,7 @@ export default {
     return res.status(201).json({link:linkCreate})
   },
 
-  async update(req:Request, res:Response){
+  async update(req, res){
     const {name, link} = req.body
     const {id} = req.params
 
@@ -39,7 +38,7 @@ export default {
     return res.status(200).json({link:getLink})
   },
   
-  async delete(req:Request, res:Response){
+  async delete(req, res){
     const {id} = req.params
 
     const linkRepository = getRepository(Link)

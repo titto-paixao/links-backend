@@ -4,14 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build":"tsc",
-    "start":"node dist/server.js",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "tyorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "pg": "^8.5.1",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.32"
   },
