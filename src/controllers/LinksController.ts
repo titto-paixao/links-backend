@@ -1,5 +1,5 @@
-import {Request, Response} from 'express'
 import {getRepository} from 'typeorm'
+import {Request, Response} from 'express'
 import Link from '../models/Link'
 
 export default {
@@ -11,7 +11,7 @@ export default {
 
     return res.status(200).json(links)
   },
-  async create(req:Request, res:Response){
+  async create(req: Request, res:Response){
     const {name, link} = req.body
 
     const linkRepository = getRepository(Link)
