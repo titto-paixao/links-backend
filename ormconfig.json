@@ -8,13 +8,13 @@
     }
   },
   "migrations":[
-    "src/database/migrations/**/*.ts"
+    "dist/database/migrations/**/*.js"
   ],
   "entities":[
-    "src/models/**/*.ts"
+    "dist/models/**/*.js"
   ],
   "cli":{
-    "migrationsDir":"src/database/migrations",
-    "entitiesDir":"src/models"
+    "migrationsDir":"dist/database/migrations",
+    "entitiesDir":"dist/models"
   }
 }
