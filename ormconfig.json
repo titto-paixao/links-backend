@@ -1,7 +1,6 @@
 {
   "type":"postgres",
   "url":"postgres://przpriuivikron:07a1f2313edc40287b72dab44bdcd19873e89d4fce6d0e257e1f32548667189a@ec2-34-225-167-77.compute-1.amazonaws.com:5432/d2c80hf5b3eg79",
-  "database":"./src/database/database.sqlite",
   "ssl": true,
   "extra": {
     "ssl": {
@@ -15,7 +14,7 @@
     "src/models/**/*.ts"
   ],
   "cli":{
-    "migrationsDir":["src/database/migrations"],
+    "migrationsDir":"src/database/migrations",
     "entitiesDir":"src/models"
   }
 }
